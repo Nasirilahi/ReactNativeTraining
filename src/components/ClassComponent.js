@@ -6,33 +6,32 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
+import PersonInfo from './Person';
 
 class ES6ClassComponent extends Component{
     constructor(){
         super();
         this.state = {
             user:{
-                name:'abc'
+                firstName:'abc'
             }
         };
         //this.onPress = this.onPress.bind(this);
     }
-    onPress(){
-        this.setState({user:{name :'xyz'}});
+    onPress = () =>{
+        this.setState({user:{firstName :'xyz'}});
     }
     render(){
+        console.log(this.props);
         return(
         <View style={{marginBottom:50,}}>
-            <Text>I am {this.state.user.name.toUpperCase()} from state in ES6Class</Text>
-            <TouchableOpacity 
-                onPress={this.onPress}
-                style={{padding:20,backgroundColor:'red'}}
-            >
-                <Text>Change me </Text>
-            </TouchableOpacity>
+         
+            <PersonInfo firstName={this.state.user.firstName} onPress={this.onPress} /> 
         </View>
         );
     }
 }
-
+ES6ClassComponent.defaultComponent = {
+    firstName: 'asjddak'
+};
 export default ES6ClassComponent;

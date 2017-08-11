@@ -12,7 +12,8 @@ export default function(){
 return(
      <View style={styles.container}>
           <ClassComponent />
-          <ES5ClassComponent />
+          {/*<ES5ClassComponent />*/}
+          {/*<PersonInfo firstName={'asdbasd'}  />*/}
       </View>
 )
 }
@@ -20,7 +21,7 @@ return(
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+   flexDirection:'row',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
