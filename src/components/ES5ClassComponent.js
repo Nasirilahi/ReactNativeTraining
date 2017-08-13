@@ -14,6 +14,11 @@ var ES5ClassComponent = React.createClass({
             }
         };
     },
+    getDefaultProps(){
+        return{
+            
+        }
+    }
     onPress(){
         this.setState({user:{name :'abc'}});
     },
