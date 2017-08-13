@@ -14,5 +14,9 @@ function PersonInfo(props){
         </View>
     );
 }
+// PersonInfo.defaultProps = {
+//     firstName: 'abc',
+//     lastName: 'xyz',
+// };
 
 export default PersonInfo;

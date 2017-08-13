@@ -13,6 +13,7 @@ return(
      <View style={styles.container}>
           <ClassComponent />
           <ES5ClassComponent />
+          <PersonInfo />
       </View>
 )
 }
