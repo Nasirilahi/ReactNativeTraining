@@ -18,7 +18,7 @@ var ES5ClassComponent = React.createClass({
         return{
             
         }
-    }
+    },
     onPress(){
         this.setState({user:{name :'abc'}});
     },
