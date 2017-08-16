@@ -25,7 +25,7 @@ export default class ProfileScreen extends Component{
             },
         };
     }
-
+    
     onChangeText = (text, type) => {
         const { user } = this.state;
         user[type].value = text;
