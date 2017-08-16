@@ -16,16 +16,38 @@ class ES6ClassComponent extends Component{
                 firstName:'abc'
             }
         };
-        //this.onPress = this.onPress.bind(this);
+        console.log('constructor');
+
+    }
+    componentWillMount(){
+        console.log('componentWillMount');
+    }
+    componentDidMount() {
+        console.log('componentDidMount');
+    }
+    componentWillReceiveProps(nextProps){
+        console.log('componentWillReceiveProps',nextProps);
+    }
+    shouldComponentUpdate(nextProps){
+        console.log('shouldComponentUpdate',nextProps);
+        return true;
+    }
+    componentWillUpdate(){
+        console.log('componentWillUpdate');
+    }
+    componentDidUpdate(){
+        console.log('componentDidUpdate');
+    }
+    componentWillUnmount() {
+        console.log('componentDidMount');
     }
     onPress = () =>{
         this.setState({user:{firstName :'xyz'}});
     }
     render(){
-        console.log(this.props);
+        console.log('render');
         return(
         <View style={{marginBottom:50,}}>
-        
             <PersonInfo firstName={this.state.user.firstName} onPress={this.onPress} /> 
         </View>
         );
