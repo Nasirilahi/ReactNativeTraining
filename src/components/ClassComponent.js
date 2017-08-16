@@ -25,7 +25,7 @@ class ES6ClassComponent extends Component{
         console.log(this.props);
         return(
         <View style={{marginBottom:50,}}>
-         
+        
             <PersonInfo firstName={this.state.user.firstName} onPress={this.onPress} /> 
         </View>
         );

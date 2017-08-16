@@ -3,31 +3,54 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  View,r
+  View,
 } from 'react-native';
+import styles from './styles';
+import FormContainer from './FormContainer';
+import Button from './form-components/Button';
 
 export default class ProfileScreen extends Component{
     constructor(){
         super();
         this.state = {
             user:{
-                firstName:''
+                firstName:{
+                    value:'',
+                    isRequired:true,
+                },
+                lastName:{
+                    value:'',
+                    isRequired:false,
+                }
             },
-            text:'',
         };
     }
-   
+
+    onChangeText = (text, type) => {
+        const { user } = this.state;
+        user[type].value = text;
+        //this.setState({user}, console.log('state', this.state));
+        //this.setState({user:{[type] :text }}, console.log('state', this.state));
+    }
+
+    onSubmit = () => {
+        const { user } = this.state;
+        if((user.firstName.isRequired && user.firstName.value)){
+            // call api to submit user data
+        }
+        else{
+            //display related information
+        }
+    }
+
     render(){
         return(
-            <View style={{flex:1,}}>
-                 <View>
-                     <Text>{'First Name:'}</Text>
-                     <TextInput
-                     style={{height:50,borderColor:'grey', borderWidth:1}}
-                     value={this.state.user.firstName}
-                     onChangeText={(text)=>this.setState({user:{firstName:text}})}
-                     />
-                 </View>
+            <View style={styles.container}>
+                 <FormContainer 
+                    user={this.state.user}
+                    onChangeText={this.onChangeText} 
+                 />
+                 <Button text={'Submit'} onSubmit={this.onSubmit} />
             </View>
         );
     }
