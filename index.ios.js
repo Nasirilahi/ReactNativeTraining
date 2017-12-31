@@ -4,4 +4,4 @@ import {
     AppRegistry,
 } from 'react-native';
 
-AppRegistry.registerComponent('reactnativeTraining', setup);
+AppRegistry.registerComponent('reactnativeTraining', () => setup);

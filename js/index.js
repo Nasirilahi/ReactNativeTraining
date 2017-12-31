@@ -1,3 +1,4 @@
+import React from 'react';
 // import LoginScreen from './LoginScreen'
 // import HomeScreen from './HomeScreen'
 import HomeScreen from './App'
@@ -6,7 +7,8 @@ import HomeScreen from './App'
 //     return reactnativeTraining
 // }
 
-const setup = () => HomeScreen
+const setup = () => <HomeScreen username={'abc xyz'} />
+
 // const setup = function() {
 //     // const authToken = TokenExistLocally ? true : false
 //     const authToken = false
