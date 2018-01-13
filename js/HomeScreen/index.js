@@ -1,3 +1,13 @@
-import HomeScreen from './HomeScreen'
+import HomeScreenMobile from './mobile'
+import HomeScreenTab from './tablet'
+// import DeviceInfo from 'react-native-device-info'
 
-export default HomeScreen
+// var component
+// if(DeviceInfo.isTablet()){
+// component = HomeScreenTab
+// }
+// else{
+//     component = HomeScreenMobile
+// }
+export default HomeScreenMobile
+// export default DeviceInfo.isTablet() ? HomeScreenTab : HomeScreenMobile

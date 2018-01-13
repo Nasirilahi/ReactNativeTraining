@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import {
     AppRegistry,
     Text,
-    View
+    View,
+    Platform
 } from 'react-native';
-import styles from './HomeScreenStyles'
-
+import styles from './styles'
 export default class HomeScreen extends Component {
+   
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Home Screen
-                </Text>
+                <Text>table</Text>
+
             </View>
-    );
+        )
     }
 }

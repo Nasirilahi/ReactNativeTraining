@@ -26,12 +26,7 @@ function HomeScreen(props){
 
     return (
         <View style={styles.container}>
-            <Text>
-                Home Screen using function
-            </Text>
-            <Text>{`Properties coming from parent ${props.username}`}</Text>
             <Text>{'Properties coming from parent----->' + props.username}</Text>
-            <Button />
         </View>
     );
 }
@@ -53,6 +48,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
+        shadowColor: 'grey',
+        shadowOpacity: 12,
+        elevation: 12
     }
 });
 

@@ -7,7 +7,7 @@ import HomeScreen from './App'
 //     return reactnativeTraining
 // }
 
-const setup = () => <HomeScreen username={'abc xyz'} />
+const setup = () => <HomeScreen />
 
 // const setup = function() {
 //     // const authToken = TokenExistLocally ? true : false
