@@ -10,12 +10,13 @@ import {
   StyleSheet,
   View
 } from 'react-native';
-import Todolist1 from './src/TodoList2'
+import Todolist3 from './src/TodoList3'
+import ListContainer from './src/TodoList1.1'
 export default class reactnativeTraining extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Todolist1 />
+        <Todolist3 />
       </View>
     );
   }
